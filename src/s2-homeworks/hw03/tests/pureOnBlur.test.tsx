@@ -23,7 +23,7 @@ test('name 2', () => {
     expect(error).toBe('Ошибка! Введите имя!')
 })
 test('name 3', () => {
-    name = '    '
+    name = ''
     pureOnBlur(name, setError)
     expect(error).toBe('Ошибка! Введите имя!')
 })
