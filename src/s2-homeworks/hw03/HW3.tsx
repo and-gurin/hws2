@@ -28,7 +28,7 @@ export const pureAddUserCallback = (name: string, setUsers: any, users: Array<Us
         _id: v1(),
         name: name
     }
-    setUsers([user, ...users])
+    setUsers([...users, user])
 }
 
 const HW3 = () => {
