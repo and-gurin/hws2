@@ -42,7 +42,6 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     // деструктуризация пропсов
     const [name, setName] = useState<string>('') // need to fix any
     const [error, setError] = useState<string>('') // need to fix any
-    const [count, setCount] = useState(0)
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // need to fix any
         setName(e.currentTarget.value) // need to fix
@@ -51,9 +50,6 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     }
     const addUser = () => {
         pureAddUser(name, setError, setName, addUserCallback);
-        if (name!==''){
-            setCount(count+1)
-        }
     }
 
     const onBlur = () => {
@@ -64,10 +60,9 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
         pureOnEnter(e, addUser)
     }
 
-    const totalUsers = count // need to fix
+    const totalUsers = users.length // need to fix
 
-    const lastUser = users.length ? users[users.length - 1] : null
-    debugger
+    const lastUser = users.length ? users[users.length -1] : null
 
     const lastUserName = lastUser ? lastUser.name : '' // need to fix
 
