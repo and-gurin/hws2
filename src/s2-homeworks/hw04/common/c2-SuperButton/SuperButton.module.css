@@ -3,12 +3,10 @@
     margin-right: 54px;
     width: 133px;
     height: 30px;
-    border: solid 1px #0066CC;
-    border-radius: 3px;
-    background-color: #0066CC;
-    color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     font-size: medium;
+    border: solid 1px #0066CC;
+    border-radius: 3px;
 }
 
 .disabled {
@@ -28,6 +26,8 @@
 }
 
 .default {
+    background-color: #0066CC;
+    color: #FFFFFF;
 }
 
 .red {
