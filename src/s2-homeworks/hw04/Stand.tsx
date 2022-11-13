@@ -36,7 +36,11 @@ const Stand = () => {
                             )
                             setValue('')
                         }}
+                        /*spanClassName={s.input}*/
                     />
+                </div>
+                <div>
+                    <SuperInputText />
                 </div>
             </div>
 
