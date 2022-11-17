@@ -15,6 +15,10 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
 
     const sidebarClass = s.sidebar
         + (open ? ' ' + s.open : '')
+        + (currentPath === PATH.PRE_JUNIOR ? ' ' + s.active:
+            currentPath === PATH.JUNIOR ? ' ' + s.active:
+                currentPath === PATH.JUNIOR_PLUS ? ' ' + s.active: '')
+
 
     return (
         <>
