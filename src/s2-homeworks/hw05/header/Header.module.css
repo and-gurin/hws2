@@ -1,22 +1,22 @@
 .burgerMenuIcon {
-    display: block;
+    /*display: block;
     margin-left: 50px;
-    z-index: 2;
+    z-index: 2;*/
 }
 
 .header {
-    position: fixed;
+    /*position: fixed;
     top: 0;
     width: 100vw;
     display: flex;
     background-color: #FFFFFF;
     box-shadow: 0 5px 5px lightgrey;
-    z-index: 1;
+    z-index: 1;*/
 }
 
 .header h1 {
-    margin-left: auto;
+    /*margin-left: auto;
     box-sizing:border-box;
-    margin-right: 50px;
+    margin-right: 50px;*/
 
 }
