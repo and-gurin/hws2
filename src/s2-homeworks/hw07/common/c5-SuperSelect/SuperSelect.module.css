@@ -1,9 +1,35 @@
+:root {
+    --select-border: #777;
+    --select-focus: blue;
+    --select-arrow: var(--select-border);
+}
+select {
+    outline: none;
+}
 .select {
+    color: lightgrey;
+    width: 100%;
+    min-width: 20ch;
+    max-width: 30ch;
+    border: 1px solid var(--select-border);
+    padding: 0.25em 0.5em;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+}
+.select--disabled {
+    cursor: not-allowed;
+    background-color: #eee;
+    background-image: linear-gradient(to top, #ddd, #eee 33%);
 }
 
 .select:focus {
+    color: black;
 }
 
 
 .option:hover {
+    background-color: #FFFFFF;
 }
