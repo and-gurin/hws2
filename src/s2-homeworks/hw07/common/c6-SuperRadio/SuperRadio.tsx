@@ -46,7 +46,6 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
     const mappedOptions: any[] = options
         ? options.map((o) => (
               <label key={name + '-' + o.id} className={s.label}>
-                  {o.value}
                   <input
                       id={id + '-input-' + o.id}
                       className={finalRadioClassName}
@@ -64,7 +63,7 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
                       {...spanProps}
                       className={spanClassName}
                   >
-
+                      {o.value}
                   </span>
               </label>
           ))
