@@ -16,7 +16,6 @@ function Clock() {
 
         //let date = new Date();
         const id = +setInterval(()=> {
-            console.log(new Date())
             return setDate(new Date())
         }, 1000);
         setTimerId(id);
@@ -35,11 +34,13 @@ function Clock() {
         setShow(false)
     }
 
+    let formatter1 = new Intl.DateTimeFormat("ru-Ru", {	year:'2-digit', month:'2-digit', day: '2-digit'});
     const stringTime = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`|| <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-    const stringDate = `${date.getDate()}:${date.getMonth()}:${date.getFullYear()}` || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
+    const stringDate = `${formatter1.format(date)}` || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
     let formatter = new Intl.DateTimeFormat("en-US", {month: "long"});
+
     const stringDay = `${(()=>{return ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][date.getDay(   )]})()}`|| <br/> // пишут студенты
     const stringMonth = `${formatter.format(date)}` || <br/> // пишут студенты
 
