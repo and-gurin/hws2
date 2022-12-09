@@ -39,7 +39,7 @@ function Clock() {
     const stringDate = `${formatter1.format(date)}` || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
-    let formatter = new Intl.DateTimeFormat("ru-Ru", {year: "2-digit",month: "long"});
+    let formatter = new Intl.DateTimeFormat("ru-Ru", {month: "long"});
 
     const stringDay = `${(()=>{return ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][date.getDay(   )]})()}`|| <br/> // пишут студенты
     const stringMonth = `${formatter.format(date)}` || <br/> // пишут студенты
