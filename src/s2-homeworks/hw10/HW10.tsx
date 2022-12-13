@@ -15,8 +15,8 @@ import {Loader} from './Loader'
 
 const HW10 = () => {
 
-    const isLoading = useSelector<AppStoreType, StateType>(state=>state.isLoading);
-    const loading = isLoading.isLoading
+    const loading = useSelector<AppStoreType, StateType>(state=>state.isLoading);
+    const isLoading = loading.isLoading
     const dispatch = useDispatch();
 
 
@@ -30,7 +30,7 @@ const HW10 = () => {
             <div className={s2.hwTitle}>Homework #10</div>
 
             <div className={s2.hw}>
-                {loading ? (
+                {isLoading ? (
                     <div id={'hw10-loading'}>
                         <Loader/>
                     </div>
