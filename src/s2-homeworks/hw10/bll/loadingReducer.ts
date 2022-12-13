@@ -2,7 +2,7 @@ export type StateType = {
     isLoading: boolean
 }
 const initState = {
-    isLoading: false,
+    isLoading: false
 }
 
 export const loadingReducer = (state= initState, action: LoadingActionType): StateType => {
