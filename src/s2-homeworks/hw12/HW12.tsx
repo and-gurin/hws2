@@ -7,21 +7,19 @@ import {changeThemeId} from './bll/themeReducer'
 import {AppStoreType} from "../hw10/bll/store";
 
 const themes = [
-    {id: '1', value: 'light'},
-    {id: '2', value: 'blue'},
-    {id: '3', value: 'dark'},
+    {id: 1, value: 'light'},
+    {id: 2, value: 'blue'},
+    {id: 3, value: 'dark'},
 ]
 
 const HW12 = () => {
-    const themeId = useSelector<AppStoreType, string>(state=>state.theme.themeId);
+    const themeId = useSelector<AppStoreType, number>(state=>state.theme.themeId);
     const dispatch = useDispatch();
-    const change = (id: string) => {
-        console.log(id)
+    const change = (id: number) => {
         dispatch(changeThemeId(id))
     }
 
     useEffect(() => {
-        console.log('effect')
         document.documentElement.dataset.theme = themeId + ''
     }, [themeId])
 

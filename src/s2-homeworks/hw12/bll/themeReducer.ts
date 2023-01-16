@@ -1,14 +1,14 @@
 const initState = {
-    themeId: '1',
+    themeId: 1,
 }
 
 export type ActionType = {
     type: 'SET_THEME_ID'
-    id: string
+    id: number
 }
 
 export type StateType = {
-    themeId: string
+    themeId: number
 }
 
 export const themeReducer = (state = initState, action: ActionType) => { // fix any
@@ -23,4 +23,4 @@ export const themeReducer = (state = initState, action: ActionType) => { // fix 
     }
 }
 
-export const changeThemeId = (id: string): ActionType => ({ type: 'SET_THEME_ID', id })
+export const changeThemeId = (id: number): ActionType => ({ type: 'SET_THEME_ID', id })
