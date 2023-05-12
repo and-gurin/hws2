@@ -33,7 +33,7 @@ const HW13 = () => {
                 setCode('Код 200!')
                 setImage(success200)
                 setText('...всё ок)')
-                setInfo('код 200 - обычно означает что скорее всего всё ок')
+                setInfo('код 200 - обычно означает что скорее всего всё ок)')
                 setIsLoading(false)
             })
             .catch((e) => {
