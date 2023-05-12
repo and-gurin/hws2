@@ -11,7 +11,7 @@ type DefaultSelectPropsType = DetailedHTMLProps<
 >
 export type OptionsType = {
     id: number
-    value: string
+    value: string | number
 }
 type SuperSelectPropsType = DefaultSelectPropsType & {
     options?:OptionsType[]
