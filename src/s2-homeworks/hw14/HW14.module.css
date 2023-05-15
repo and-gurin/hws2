@@ -1,7 +1,10 @@
 .tech {
-
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .loading {
-
+    text-align: right;
+    max-width: 370px;
 }

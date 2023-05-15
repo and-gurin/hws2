@@ -1,13 +1,15 @@
 .input:focus {
-
+    border: solid 1px rgba(0, 102, 204, 1);
+    border-radius: 2px;
 }
 
 .input {
     width: 372px;
     height: 36px;
     border: solid #D1D1D1 1px;
-    border-radius: 5px;
+    border-radius: 2px;
     outline: none;
+    padding: 15px;
 }
 
 .inputWrapper {
@@ -19,14 +21,14 @@
     width: 372px;
     height: 36px;
     border: solid #D1D1D1 1px;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .errorInput {
     width: 372px;
     height: 36px;
     border: solid #CC1439 1px;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .errorInput:focus {
