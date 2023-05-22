@@ -51,36 +51,32 @@ const HW15 = () => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
-                // делает студент
-
-                // сохранить пришедшие данные
-
-                //
+                if (res) {
+                    console.log(res)
+                    setTechs(res.data.techs)
+                    setTotalCount(res.data.totalCount)
+                    setLoading(false)
+                }
             })
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
-        // делает студент
 
-        // setPage(
-        // setCount(
+        setPage(newPage)
+        setCount(newCount)
 
-        // sendQuery(
-        // setSearchParams(
+        sendQuery({sort, page: newPage, count: newCount})
+        setSearchParams({sort, page: String(newPage), count: String(newCount)})
 
-        //
     }
 
     const onChangeSort = (newSort: string) => {
-        // делает студент
 
-        // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
+        setSort(newSort)
+        setPage(1)
 
-        // sendQuery(
-        // setSearchParams(
-
-        //
+        sendQuery({sort: newSort, page: page, count: count})
+        setSearchParams({sort, page: '1', count: String(count)})
     }
 
     useEffect(() => {

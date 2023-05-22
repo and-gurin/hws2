@@ -3,9 +3,22 @@
 }
 
 .text1 {
-
+    padding-right: 10px;
 }
 
 .text2 {
 
+}
+
+.select {
+    max-width: 39px;
+    max-height: 24px;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 4px;
+    border: 1px solid silver;
+    border-radius: 2px;
+    color: black;
+    margin-right: 6px;
+    margin-bottom: 36px;
 }
