@@ -4,16 +4,8 @@ import MessageSender from './message-sender/MessageSender'
 import s2 from '../../s1-main/App.module.css'
 import FriendMessage from './friend-message/FriendMessage'
 import avatar from './avatar.png'
+import avatarF from './avatar_friend.png'
 
-/*
-* 1 - описать тип MessageType
-* 2 - описать тип MessagePropsType в файле Message.tsx
-* 3 - в файле Message.tsx отобразить приходящие данные
-* 4 - выполнить пункты 2, 3 в файле FriendMessage.tsx
-* 5 - сделать стили в соответствии с дизайном
-* */
-
-// нужно создать правильный тип вместо any
 export type UserType = {
     avatar: string
     name: string
@@ -28,42 +20,40 @@ export type MessageType = {
     message: MessageUserType
 }
 
-// структуру объекта не менять
 export const message0: MessageType = {
     id: 0,
     user: {
-        avatar: avatar, // можно менять
-        name: 'Some Name',  // можно менять
+        avatar: avatar,
+        name: 'Gregor',
     },
     message: {
-        text: 'some textsome textsome textsome textsome textsome textsome text', // можно менять
-        time: '22:00', // можно менять
+        text: 'Deal with marketing department',
+        time: '22:00',
     },
 }
 export const friendMessage0: MessageType = {
     id: 100,
     user: {
-        avatar: avatar, // можно менять
-        name: 'Friend Name', // можно менять
+        avatar: avatarF,
+        name: 'Jack',
     },
     message: {
-        text: 'зеркальное сообщение для тренировки css', // можно менять
-        time: '22:00', // можно менять
+        text: 'Get (launch, release) the product before our competitors',
+        time: '22:20',
     },
 }
 
 const HW1 = () => {
     return (
         <div id={'hw1'}>
-            <div className={s2.hwTitle}>Homework #1</div>
+            <div className={s2.hwTitle}>Friendly chat</div>
             <div className={s2.hw}>
-                {/*проверка отображения (не менять)*/}
+
                 <div>
                     <Message message={message0} />
                     <FriendMessage message={friendMessage0} />
                 </div>
 
-                {/*для автоматической проверки дз (не менять)*/}
                 <MessageSender M={Message} />
             </div>
         </div>
