@@ -8,6 +8,7 @@
 }
 
 .hwTitle {
+    font-weight: bolder;
     margin-top: 40px;
     padding: 35px 50px 9px;
     border-top: solid 2px lightgrey;

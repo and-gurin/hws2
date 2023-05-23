@@ -41,6 +41,7 @@ const SuperSort: React.FC<SuperSortPropsType> = (
         <span
             id={id + '-sort-' + value}
             onClick={onChangeCallback}
+            style={{display: 'inline-block', paddingLeft: '5px'}}
         >
 
             <img

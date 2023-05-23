@@ -92,7 +92,7 @@ const HW15 = () => {
 
     return (
         <div id={'hw15'}>
-            <div className={s2.hwTitle}>Homework #15</div>
+            <div className={s2.hwTitle}>SuperPagination + SuperSort</div>
 
             <div className={s2.hw}>
                 {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
