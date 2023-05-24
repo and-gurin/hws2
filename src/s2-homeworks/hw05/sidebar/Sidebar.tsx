@@ -15,14 +15,9 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
 
     const sidebarClass = s.sidebar
         + (open ? ' ' + s.open : '')
-        /*+ (currentPath === PATH.PRE_JUNIOR ? ' ' + s.active:
-            currentPath === PATH.JUNIOR ? ' ' + s.active:
-                currentPath === PATH.JUNIOR_PLUS ? ' ' + s.active: '')*/
-
 
     return (
         <>
-            {/*затемнение справа от открытого меню*/}
             {open && <div className={s.background} onClick={handleClose}/>}
 
             <aside className={sidebarClass}>
@@ -41,7 +36,7 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
 
                         className={currentPath === PATH.PRE_JUNIOR ? ' ' + s.active: ''}
                     >
-                        Pre-junior
+                        Junior
                     </NavLink>
                     <NavLink
                         id={'hw5-junior-link'}
@@ -49,7 +44,7 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
 
                         className={currentPath === PATH.JUNIOR ? ' ' + s.active: ''}
                     >
-                        Junior
+                        Middle
                     </NavLink>
                     <NavLink
                         id={'hw5-junior-plus-link'}
@@ -57,7 +52,7 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
 
                         className={currentPath === PATH.JUNIOR_PLUS ? ' ' + s.active: ''}
                     >
-                        Junior Plus
+                        Senior
                     </NavLink>
                 </nav>
             </aside>

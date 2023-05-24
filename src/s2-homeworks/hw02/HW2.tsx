@@ -50,7 +50,7 @@ function HW2() {
 
     return (
         <div id={'hw2'}>
-            <div className={s2.hwTitle}>Affairs</div>
+            <div className={s2.hwTitle}>Filtered affairs</div>
             <div className={s2.hw}>
                 <Affairs
                     data={filteredAffairs}
