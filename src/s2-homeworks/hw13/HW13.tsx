@@ -32,24 +32,24 @@ const HW13 = () => {
             .then((res) => {
                 setCode('Код 200!')
                 setImage(success200)
-                setText('...всё ок)')
-                setInfo('код 200 - обычно означает что скорее всего всё ок)')
+                setText('...everything Ok)')
+                setInfo('code 200 - usually means that most likely everything is ok)')
                 setIsLoading(false)
             })
             .catch((e) => {
                 setIsLoading(false)
                 console.log(e.message)
                 if (e.message === 'Request failed with status code 500') {
-                    setCode('Ошибка 500!')
+                    setCode('error 500!')
                     setImage(error500)
-                    setText('эмитация ошибки на сервере')
-                    setInfo('ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)')
+                    setText('simulation of an error on the server')
+                    setInfo('error 500 - usually means that something brock down on the server , for example database)')
                 }
                 if (e.message === 'Request failed with status code 400') {
-                    setCode('Ошибка 400!')
+                    setCode('error 400!')
                     setImage(error400)
-                    setText('Ты не отправил success в body вообще!')
-                    setInfo('ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
+                    setText('You did not send success в body!')
+                    setInfo('error 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
                 }
                 if (e.message === 'Network Error') {
                     setCode('Error!')
