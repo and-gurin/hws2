@@ -48,8 +48,8 @@ const HW13 = () => {
                 if (e.message === 'Request failed with status code 400') {
                     setCode('error 400!')
                     setImage(error400)
-                    setText('You did not send success в body!')
-                    setInfo('error 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
+                    setText('You did not send success in body!')
+                    setInfo('error 400 - usually means that front sent something wrong to the back!')
                 }
                 if (e.message === 'Network Error') {
                     setCode('Error!')
@@ -95,7 +95,7 @@ const HW13 = () => {
                     </SuperButton>
                     <SuperButton
                         id={'hw13-send-null'}
-                        onClick={send(null)} // имитация запроса на не корректный адрес
+                        onClick={send(null)}
                         xType={'secondary'}
                         disabled={isLoading}
 
