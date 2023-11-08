@@ -26,7 +26,7 @@ const HW12 = () => {
     return (
         <div id={'hw12'}>
             <div id={'hw12-text'} className={s2.hwTitle}>
-                Homework #12
+                Theme changer
             </div>
 
             <div className={s2.hw}>
